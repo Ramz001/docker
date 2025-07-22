@@ -46,4 +46,4 @@ COPY . .
 EXPOSE 5173
 
 # command to run the app
-CMD npm run dev
+CMD ["pnpm", "dev"]
