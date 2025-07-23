@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   web:
     build:
@@ -15,10 +13,11 @@ services:
           action: rebuild
         - path: ./pnpm-lock.yaml
           action: rebuild
-        - path: "./app"
+        - path: .
+          target: "./app"
           action: sync
     environment:
       DB_URL: mongodb+srv://sujata:rnZzJjIDr3bIDymV@cluster0.hnn88vs.mongodb.net
 
-volumes: 
+volumes:
   tasked:
